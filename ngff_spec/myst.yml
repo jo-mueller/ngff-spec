@@ -2,13 +2,15 @@ version: 1
 project:
   title: Next-generation file format specification
   authors:
-    - name: NGFF-community
-    - name: Josh Moore
+    - id: ngff
+      name: NGFF children
+    - id: josh-moore
+      name: Josh Moore
       affiliation: German BioImaging e.V.
       orcid: https://orcid.org/0000-0003-4028-811X
-      github: joshmoore
-      id: josh-moore
-    - name: Johannes Soltwedel
+      github: josh-moore
+    - id: johannes-soltwedel
+      name: Johannes Soltwedel
       affiliation: German BioImaging e.V.
       orcid: https://orcid.org/0000-0003-1273-2412
       id: johannes-soltwedel
