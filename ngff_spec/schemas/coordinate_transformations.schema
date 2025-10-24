@@ -354,8 +354,21 @@
     "coordinates": {
       "type": "object",
       "properties": {
-        "type": { "const": "coordinates" }
-      }
+        "type": { "const": "coordinates" },
+        "path": {
+          "type": "string",
+          "description": "Path to the zarr array containing the coordinate field."
+        },
+        "interpolation": {
+          "type": "string",
+          "enum": ["nearest", "linear", "cubic"],
+          "default": "linear",
+          "description": "Interpolation method to use when applying the coordinate field."
+        }
+      },
+      "required": [
+        "path"
+      ]
     }
   }
 }
