@@ -108,15 +108,14 @@
                 "type": "string"
               },
               "description": "Names of the output axes for this transformation."
-            },
-            "required": [
-              "input_axes",
-              "output_axes"
-            ]
-          }
+            }
+          },
+          "required": [
+            "input_axes",
+            "output_axes"
+          ]
         }
-      ],
-      "required": ["input", "output"]
+      ]
     },
     "identity": {
       "type": "object",
@@ -243,11 +242,11 @@
                   "type": "number"
                 }
               }
-            },
-            "required": [
-              "affine"
-            ]
-          }
+            }
+          },
+          "required": [
+            "affine"
+          ]
         }
       ]
     },
@@ -280,11 +279,11 @@
                   "type": "number"
                 }
               }
-            },
-            "required": [
-              "rotation"
-            ]
-          }
+            }
+          },
+          "required": [
+            "rotation"
+          ]
         }
       ]
     },
@@ -300,7 +299,8 @@
       },
       "required": [
         "transformation"
-      ]
+      ],
+      "description": "The inverse of another coordinate transformation."
     },
     "bijection": {
       "type": "object",
@@ -317,7 +317,8 @@
       },
       "required": [
         "forward", "inverse"
-      ]
+      ],
+      "description": "A pair of forward and inverse coordinate transformations."
     },
     "sequence": {
       "description": "A sequence of transformations",
@@ -330,7 +331,10 @@
             "$ref": "#/$defs/coordinateTransformation"
           }
         }
-      }
+      },
+      "required": [
+        "transformations"
+      ]
     },
     "byDimension": {
       "type": "object",
@@ -340,13 +344,13 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/byDimensionTransformation"
-          },
-          "description": "List of transformations, each specifying input_axes and output_axes."
-        },
-        "required": [
-          "transformations"
-        ]
-      }
+          }
+        }
+      },
+      "required": [
+        "transformations"
+      ],
+      "description": "A set of transformations applied independently to each dimension."
     },
     "displacements": {
       "type": "object",
