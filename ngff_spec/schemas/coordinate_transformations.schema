@@ -325,8 +325,12 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/byDimensionTransformation"
-          }
-        }
+          },
+          "description": "List of transformations, each specifying input_axes and output_axes."
+        },
+        "required": [
+          "transformations"
+        ]
       }
     },
     "displacements": {
