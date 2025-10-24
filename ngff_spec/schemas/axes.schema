@@ -35,7 +35,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Name of the axis"
+          "minLength": 1,
+          "description": "Name of the axis. Must be unique within the coordinate system."
         },
         "longName": {
           "type": "string",
@@ -43,7 +44,15 @@
         },
         "type": {
           "type": "string",
-          "description": "Dimension of the axis"
+          "description": "Type of the axis. Should be one of the predefined types.",
+          "enum": [
+            "array",
+            "space",
+            "time",
+            "channel",
+            "coordinate",
+            "displacement"
+          ]
         },
         "discrete": {
           "type": "boolean",
