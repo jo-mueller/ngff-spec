@@ -9,7 +9,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -51,7 +51,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -91,7 +91,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -128,7 +128,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "datasets": [
@@ -174,7 +174,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -215,7 +215,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -252,7 +252,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -287,7 +287,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -324,7 +324,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -361,7 +361,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -412,7 +412,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -466,7 +466,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -501,7 +501,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -533,7 +533,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -572,7 +572,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -609,7 +609,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -652,7 +652,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -683,7 +683,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -710,7 +710,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -736,7 +736,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "datasets": [
@@ -761,7 +761,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -798,7 +798,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -839,7 +839,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [],
@@ -865,7 +865,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -908,7 +908,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": []
         }
       },
@@ -919,7 +919,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -973,7 +973,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -1005,7 +1005,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [

@@ -9,7 +9,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "name": "example",
@@ -95,7 +95,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -143,7 +143,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "@id": "top",
           "@type": "ngff:Image",
           "multiscales": [
@@ -193,7 +193,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
@@ -235,7 +235,7 @@
       "description": "TBD",
       "data": {
         "ome": {
-          "version": "0.5",
+          "version": "0.6dev2",
           "multiscales": [
             {
               "axes": [
