@@ -335,8 +335,21 @@
     "displacements": {
       "type": "object",
       "properties": {
-        "type": { "const": "displacements" }
-      }
+        "type": { "const": "displacements" },
+        "path": {
+          "type": "string",
+          "description": "Path to the zarr array containing the displacement field."
+        },
+        "interpolation": {
+          "type": "string",
+          "enum": ["nearest", "linear", "cubic"],
+          "default": "linear",
+          "description": "Interpolation method to use when applying the displacement field."
+        }
+      },
+      "required": [
+        "path"
+      ]
     },
     "coordinates": {
       "type": "object",
