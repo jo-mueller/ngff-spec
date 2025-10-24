@@ -111,18 +111,24 @@
         { "$ref": "#/$defs/coordinateTransformation" },
         {
           "properties": {
-            "input": {
+            "input_axes": {
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Names of the input axes for this transformation."
             },
-            "output": {
+            "output_axes": {
               "type": "array",
               "items": {
                 "type": "string"
-              }
-            }
+              },
+              "description": "Names of the output axes for this transformation."
+            },
+            "required": [
+              "input_axes",
+              "output_axes"
+            ]
           }
         }
       ],
