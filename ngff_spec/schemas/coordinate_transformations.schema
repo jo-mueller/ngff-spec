@@ -150,12 +150,11 @@
           "const": "mapAxis"
         },
         "mapAxis": {
-          "type": "object",
-          "patternProperties": {
-            ".*": {
-              "type": "string"
-            }
-          }
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "An array of integers representing the new axis order as zero-based indices of the input axes."
         },
         "required": [
           "mapAxis"
