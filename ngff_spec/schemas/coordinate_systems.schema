@@ -15,7 +15,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Name of coordinate system"
+          "minLength": 1,
+          "description": "Name of coordinate system. Must be unique among all coordinate systems."
         },
         "axes": {
           "$ref": "axes.schema"
