@@ -29,22 +29,6 @@
     ]
   },
   "$defs": {
-    "path_w_url": {
-      "description": "Path specification. Schema local solution until https://github.com/ome/ngff/issues/144 is resolved.",
-      "type": "object",
-      "properties": {
-        "path": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "path"
-      ]
-    },
     "coordinateTransformation": {
       "description": "OME-NGFF coordinate transformation.",
       "allOf": [
@@ -170,7 +154,15 @@
       },
       "oneOf": [
         {
-          "$ref": "#/$defs/path_w_url"
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to a zarr array containing the scale factors."
+            }
+          },
+          "required": [
+            "path"
+          ]
         },
         {
           "properties": {
@@ -197,7 +189,15 @@
       },
       "oneOf": [
         {
-          "$ref": "#/$defs/path_w_url"
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to a zarr array containing the translation vectors."
+            }
+          },
+          "required": [
+            "path"
+          ]
         },
         {
           "properties": {
@@ -223,7 +223,15 @@
       },
       "oneOf": [
         {
-          "$ref": "#/$defs/path_w_url"
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to a zarr array containing the affine matrix."
+            }
+          },
+          "required": [
+            "path"
+          ]
         },
         {
           "properties": {
@@ -252,7 +260,15 @@
       },
       "oneOf": [
         {
-          "$ref": "#/$defs/path_w_url"
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to a zarr array containing the rotation matrix."
+            }
+          },
+          "required": [
+            "path"
+          ]
         },
         {
           "properties": {
