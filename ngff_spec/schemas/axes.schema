@@ -44,15 +44,7 @@
         },
         "type": {
           "type": "string",
-          "description": "Type of the axis. Should be one of the predefined types.",
-          "enum": [
-            "array",
-            "space",
-            "time",
-            "channel",
-            "coordinate",
-            "displacement"
-          ]
+          "description": "Type of the axis. Can be a predefined type or custom type."
         },
         "discrete": {
           "type": "boolean",
