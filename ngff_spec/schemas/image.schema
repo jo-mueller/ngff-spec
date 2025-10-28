@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ngff.openmicroscopy.org/0.6.dev2/schemas/image.schema",
+  "$id": "https://ngff.openmicroscopy.org/0.6dev2/schemas/image.schema",
   "title": "OME-Zarr Image",
   "description": "The zarr.json attributes key",
   "type": "object",
@@ -16,7 +16,7 @@
           "$ref": "#/$defs/omero"
         },
         "version": {
-          "$ref": "https://ngff.openmicroscopy.org/0.6.dev2/schemas/_version.schema"
+          "$ref": "https://ngff.openmicroscopy.org/0.6dev2/schemas/_version.schema"
         }
       },
       "required": [
@@ -60,7 +60,7 @@
           "version": {
             "type": "string",
             "enum": [
-              "0.6.dev2"
+              "0.6dev2"
             ]
           },
           "coordinateSystems": {
