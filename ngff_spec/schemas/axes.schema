@@ -27,7 +27,7 @@
       }
     }
   },
-  "minContains": 0,
+  "minContains": 2,
   "maxContains": 3,
   "$defs": {
     "axis": {
