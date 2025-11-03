@@ -10,10 +10,10 @@
       "type": "object",
       "properties": {
         "multiscales": {
-          "$ref": "#/$defs/multiscales"
+          "$ref": "https://ngff.openmicroscopy.org/0.6dev2/schemas/image.schema#/$defs/multiscales"
         },
         "omero": {
-          "$ref": "#/$defs/omero"
+          "$ref": "https://ngff.openmicroscopy.org/0.6dev2/schemas/image.schema#/$defs/omero"
         },
         "version": {
           "$ref": "https://ngff.openmicroscopy.org/0.6dev2/schemas/_version.schema"
@@ -51,7 +51,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "items": {
-                    "$ref": "#/$defs/multiscale_coordinateTransformations"
+                    "$ref": "https://ngff.openmicroscopy.org/0.6dev2/schemas/image.schema#/$defs/multiscale_coordinateTransformations"
                   },
                   "minItems": 1,
                   "maxItems": 1
