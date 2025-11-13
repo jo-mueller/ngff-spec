@@ -17,4 +17,4 @@ build:
       html: 
         - cd ngff_spec/ && jupyter book build --html --ci
         - mkdir -p $READTHEDOCS_OUTPUT
-        - mv ./ngff_spec/_build/html $READTHEDOCS_OUTPUT
+        - mv ./ngff_spec/_build/html* $READTHEDOCS_OUTPUT
