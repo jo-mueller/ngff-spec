@@ -15,7 +15,7 @@ build:
 
     build:
       html: 
-        - export BASE_URL="/projects/specification/en/latest/"
+        - export BASE_URL="/projects/specification/"
         - cd ngff_spec/ && jupyter book build --html --ci
         - mkdir -p $READTHEDOCS_OUTPUT
         - mv ./ngff_spec/_build/html/* $READTHEDOCS_OUTPUT
