@@ -13,22 +13,26 @@ The built documentation including contribution hints can be found **[here](https
 
 Conformance can be tested at several levels.
 
-1. Validating a single zarr attributes object (i.e. containing OME-Zarr metadata)
+1. Validating that individual fields of a zarr attributes object are valid.
+2. Validating a single zarr attributes object (i.e. containing OME-Zarr metadata)
 
     - Validates that correct data can be represented, and that internally inconsistent data can be caught
     - Cannot validate references to other objects in the zarr hierarchy
     - Cannot validate conformance to other zarr metadata e.g. array data type, dimensionality
 
-2. Validating a metadata-only zarr hierarchy
+3. Validating a metadata-only zarr hierarchy
 
     - Can validate references to other objects and other zarr metadata
     - Cannot validate values e.g. the invertibility of an affine matrix defined as a zarr array
 
-3. Validating a zarr hierarchy with data
+4. Validating a zarr hierarchy with data
 
-This repository contains a set of test cases for levels
-1 ([`./tests/attributes`](./tests/attributes/)) and
-2 ([`./tests/zarr`](./tests/zarr/)),
+This repository contains
+
+- JSON schemas which handle level 1
+- a set of test zarr attributes JSON for level 2 ([`./tests/attributes`](./tests/attributes/))
+- a set of metadata-only zarr hierarchies for level 3 ([`./tests/zarr`](./tests/zarr/))
+
 as well as a tool for feeding these test cases into an external validator.
 
 ### Testing tool
@@ -47,7 +51,7 @@ which takes as its last argument the path to either
 The dingus should print to STDOUT a JSON object with the keys:
 
 - `"valid"`: boolean, whether this is valid
-- optionally `"message"`: str, free text describing the success/ failure
+- optionally `"message"`: string, free text describing the success/ failure
 
 Call the tool like
 
@@ -66,3 +70,13 @@ Each call to the dingus will then look like
 `ome_zarr_conformance.py` will parse the JSON output and format the results of all requested tests in a tab-separated table.
 
 Full usage information is available with `./ome_zarr_conformance.py --help`.
+
+### JSON Schema tests
+
+You can use the conformance testing tool to test JSON Schema-based validation with
+
+```sh
+>>> ./ome_zarr_conformance.py attributes -- uv run jsonschema_dingus.py attributes
+```
+
+Some failures are expected as JSON Schema can only handle level 1 validation.
