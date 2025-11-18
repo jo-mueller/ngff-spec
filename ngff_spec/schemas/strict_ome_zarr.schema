@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ngff.openmicroscopy.org/0.6dev2/schemas/ome_zarr.schema",
+  "$id": "https://ngff.openmicroscopy.org/0.6dev2/schemas/strict_ome_zarr.schema",
   "anyOf": [
     {
       "$ref": "https://ngff.openmicroscopy.org/0.6dev2/schemas/bf2raw.schema"
