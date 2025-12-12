@@ -45,7 +45,7 @@ Examples of transitional metadata include custom additions by implementations th
 Some of the JSON examples in this document include comments.
 However, these are only for clarity purposes and comments MUST NOT be included in JSON objects.
 
-# Storage format
+## Storage format
 
 OME-Zarr is implemented using the Zarr format as defined by the
 [version 3 of the Zarr specification](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html).
@@ -136,7 +136,7 @@ A well group SHOULD NOT be present if there are no images in the well.
     └── ...                   # Other rows
 ```
 
-# OME-Zarr Metadata
+## OME-Zarr Metadata
 (metadata)=
 
 The "OME-Zarr Metadata" contains metadata keys as specified below for discovering certain types of data, especially images.
@@ -1738,14 +1738,14 @@ The first field is part of the first acquisition, and the second field is part o
 ```
 ````
 
-# Specification naming style
+## Specification naming style
 (naming-style)=
 
 Multi-word keys in this specification should use the `camelCase` style.
 NB: some parts of the specification don't obey this convention as they were added before this was adopted,
 but they should be updated in due course.
 
-# Implementations
+## Implementations
 (implementations-md)=
 
 See [Tools](https://ngff.openmicroscopy.org/tools/index.html).
