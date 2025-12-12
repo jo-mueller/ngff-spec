@@ -5,14 +5,6 @@ short_title: OME-Zarr
 
 # Version 0.5
 
-```{toctree}
-:maxdepth: 1
-
-_generated/examples.md
-_generated/schemas.md
-
-```
-
 <pre class='metadata'>
 Level: 1
 Status: w3c/CG-FINAL
