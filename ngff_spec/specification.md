@@ -5,6 +5,14 @@ short_title: OME-Zarr
 
 # Version 0.5
 
+```{toctree}
+:maxdepth: 1
+
+_generated/examples.md
+_generated/schemas.md
+
+```
+
 <pre class='metadata'>
 Level: 1
 Status: w3c/CG-FINAL
@@ -25,6 +33,8 @@ Status Text: The current released version of this specification is 0.5. Migratio
 Status Text: will be provided between numbered versions. Data written with these latest changes
 Status Text: (an "editor's draft") will not necessarily be supported.
 </pre>
+
+**Feedback:** [Forum](https://forum.image.sc/tag/ome-ngff), [Github](https://github.com/ome/ngff/issues)
 
 ## OME-Zarr specification
 (ome-zarr)=
