@@ -579,15 +579,6 @@ were added before this was adopted, but they should be updated in due course.
 
 See [Tools](https://ngff.openmicroscopy.org/tools/index.html).
 
-## Citing
-(citing)=
-
-[Next-generation file format (NGFF) specifications for storing bioimaging data in the cloud.](https://ngff.openmicroscopy.org/0.4)
-J. Moore, *et al*. Open Microscopy Environment Consortium, 8 February 2022.
-This edition of the specification is [https://ngff.openmicroscopy.org/0.5/](https://ngff.openmicroscopy.org/0.5/]).
-The latest edition is available at [https://ngff.openmicroscopy.org/latest/](https://ngff.openmicroscopy.org/latest/).
-[(doi:10.5281/zenodo.4282107)](https://doi.org/10.5281/zenodo.4282107)
-
 ## Version History
 (history)=
 
@@ -671,68 +662,3 @@ The latest edition is available at [https://ngff.openmicroscopy.org/latest/](htt
   </tr>
 </table>
 
-
-<pre class="biblio">
-{
-  "blogNov2020": {
-    "href": "https://blog.openmicroscopy.org/file-formats/community/2020/11/04/zarr-data/",
-    "title": "Public OME-Zarr data (Nov. 2020)",
-    "authors": [
-      "OME Team"
-    ],
-    "status": "Informational",
-    "publisher": "OME",
-    "id": "blogNov2020",
-    "date": "04 November 2020"
-  },
-  "imagesc26952": {
-    "href": "https://forum.image.sc/t/ome-s-position-regarding-file-formats/26952",
-    "title": "OME’s position regarding file formats",
-    "authors": [
-      "OME Team"
-    ],
-    "status": "Informational",
-    "publisher": "OME",
-    "id": "imagesc26952",
-    "date": "19 June 2020"
-  },
-  "n5": {
-    "id": "n5",
-    "href": "https://github.com/saalfeldlab/n5/issues/62",
-    "title": "N5---a scalable Java API for hierarchies of chunked n-dimensional tensors and structured meta-data",
-    "status": "Informational",
-    "authors": [
-      "John A. Bogovic",
-      "Igor Pisarev",
-      "Philipp Hanslovsky",
-      "Neil Thistlethwaite",
-      "Stephan Saalfeld"
-    ],
-    "date": "2020"
-  },
-  "ome-zarr-py": {
-    "id": "ome-zarr-py",
-    "href": "https://doi.org/10.5281/zenodo.4113931",
-    "title": "ome-zarr-py: Experimental implementation of next-generation file format (NGFF) specifications for storing bioimaging data in the cloud.",
-    "status": "Informational",
-    "publisher": "Zenodo",
-    "authors": [
-      "OME",
-      "et al"
-    ],
-    "date": "06 October 2020"
-  },
-  "zarr": {
-    "id": "zarr",
-    "href": "https://doi.org/10.5281/zenodo.4069231",
-    "title": "Zarr: An implementation of chunked, compressed, N-dimensional arrays for Python.",
-    "status": "Informational",
-    "publisher": "Zenodo",
-    "authors": [
-      "Alistair Miles",
-      "et al"
-    ],
-    "date": "06 October 2020"
-  }
-}
-</pre>
