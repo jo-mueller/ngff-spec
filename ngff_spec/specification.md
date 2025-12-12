@@ -3,6 +3,8 @@ title: Next-generation file format specification
 short_title: OME-Zarr
 ---
 
+# Version 0.5
+
 <pre class='metadata'>
 Level: 1
 Status: w3c/CG-FINAL
