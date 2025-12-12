@@ -3,6 +3,7 @@ title: Next-generation file format specification
 short_title: OME-Zarr
 ---
 
+# Version 0.6.dev2
 
 **Feedback:** [Forum](https://forum.image.sc/tag/ome-ngff), [Github](https://github.com/ome/ngff/issues)
 
