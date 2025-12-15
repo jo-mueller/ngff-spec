@@ -23,6 +23,7 @@ def build_json_examples():
     index_md = """---
 title: NGFF metadata JSON Examples
 short_title: JSON Examples
+author: ""
 ---
 
 This section contains JSON examples for various metadata layouts.
@@ -30,12 +31,14 @@ This section contains JSON examples for various metadata layouts.
 
     for example in example_types:
         json_files = glob.glob(os.path.join(input_directory, example, '*.json'), recursive=True)
-        markdown_file_name = os.path.join(output_directory, f'{example}.md')
 
         index_md += f"\n## {example}\n"
 
         # add header
-        markdown_content = f"""# {example}\n\n
+        markdown_content = f"""---
+title: {example} Examples
+author: ""
+---
 
 This document contains JSON examples for {example} metadata layouts.
 
@@ -62,10 +65,10 @@ This document contains JSON examples for {example} metadata layouts.
 ```
 """
         # create 
-        with open(markdown_file_name, 'w') as md_file:
+        with open(os.path.join(output_directory, f'{example}.md'), 'w') as md_file:
             md_file.write(markdown_content)
 
-    with open(os.path.join("examples.md"), 'w') as index_file:
+    with open(os.path.join("_generated/examples.md"), 'w') as index_file:
         index_file.write(index_md)
 
 def build_json_schemas():
@@ -78,15 +81,12 @@ def build_json_schemas():
     os.makedirs(output_directory, exist_ok=True)
     schema_files = glob.glob(os.path.join(schema_source_dir, '*.schema'), recursive=True)
 
-    # Create a resolver mapping for local schemas
-    schema_mapping = {}
-    for schema_file in schema_files:
-        with open(schema_file, 'r') as f:
-            schema_content = json.load(f)
-            if '$id' in schema_content:
-                schema_mapping[schema_content['$id']] = os.path.abspath(schema_file)
 
-    index_markdown = """# JSON Schemas
+    index_markdown = """---
+title: NGFF metadata JSON Schemas
+short_title: JSON Schemas
+author: ""
+---
 
 This section contains JSON schemas for various metadata layouts.
 Find below links to auto-generated markdown pages or interactive HTML pages for each schema.
@@ -110,9 +110,9 @@ Find below links to auto-generated markdown pages or interactive HTML pages for 
             config_md = GenerationConfiguration(
                 template_name='md',
                 with_footer=True,
-                show_toc=False,
-                link_to_reused_ref=False,
-                custom_template_global_vars={'schema_mapping': schema_mapping})
+                show_toc=True,
+                link_to_reused_ref=True,
+                )
             generate_from_filename(
                 os.path.abspath(schema_file),
                 result_file_name=os.path.abspath(output_path_md),
@@ -120,15 +120,20 @@ Find below links to auto-generated markdown pages or interactive HTML pages for 
             )
 
             # insert mySt cross-reference at top of markdown files
-            with open(output_path_md, 'r') as md_file:
+            with open(output_path_md, 'r', encoding='utf-8') as md_file:
                 md_content = md_file.read()
             crossref = f"schemas:{Path(schema_file).stem}"
-            md_content = f"({crossref})=\n\n{md_content}"
-            with open(output_path_md, 'w') as md_file:
+            md_content = f"""---
+author: ""
+---
+({crossref})=\n\n{md_content}
+"""
+            with open(output_path_md, 'w', encoding='utf-8') as md_file:
                 md_file.write(md_content)
 
             link_markdown = f"[{Path(schema_file).stem}](#{crossref})"
-        except Exception:
+        except Exception as e:
+            print(f"Error generating markdown for {schema_file}: {e}")
             link_markdown = ""
 
         try:
@@ -136,8 +141,8 @@ Find below links to auto-generated markdown pages or interactive HTML pages for 
                 template_name='js',
                 with_footer=True,
                 show_toc=False,
-                link_to_reused_ref=False,
-                custom_template_global_vars={'schema_mapping': schema_mapping})
+                link_to_reused_ref=True,
+                )
 
             generate_from_filename(
                 os.path.abspath(schema_file),
@@ -146,12 +151,13 @@ Find below links to auto-generated markdown pages or interactive HTML pages for 
             )
             link_html = f"[{Path(schema_file).stem}]({output_path_html})"
 
-        except Exception:
+        except Exception as e:
+            print(f"Error generating HTML for {schema_file}: {e}")
             link_html = ""
 
         index_markdown += f"| {Path(schema_file).stem} | {link_markdown} | {link_html} |\n"
 
-    with open(os.path.join("schemas.md"), 'w') as index_file:
+    with open(os.path.join("_generated/schemas.md"), 'w') as index_file:
         index_file.write(index_markdown)
 
 def build_footer():
@@ -161,8 +167,7 @@ def build_footer():
     footer_content = f"""
 <div>
     Copyright © 2020-{year}
-    <a href="https://www.openmicroscopy.org/"><abbr title="Open Microscopy Environment">OME</abbr></a><sup>®</sup>
-    (<a href="https://dundee.ac.uk/"><abbr title="University of Dundee">U. Dundee</abbr></a>).
+    <a href="https://www.openmicroscopy.org/"><abbr title="Open Microscopy Environment">OME</abbr></a><sup>®</sup>.
     OME trademark rules apply.
 </div>
 """
