@@ -1,0 +1,41 @@
+id: https://ngff.openmicroscopy.org/0.6.dev3/coordinate_system
+name: ome-zarr-coordinate-system
+description: "OME-Zarr Coordinate System schema."
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ome: https://ngff.openmicroscopy.org
+
+imports:
+  - linkml:types
+  - axes
+
+classes:
+  CoordinateSystem:
+    description: > 
+      List of axes defining the coordinate system.
+      Must contain at least 2 and at most 3 space axes.
+    slots:
+      - name
+      - axes
+    slot_usage:
+      name:
+        required: true
+        description: "Name of the coordinate system."
+    unique_keys:
+      axes:
+        description: "Ensure axis names are unique within the coordinate system."
+        unique_key_slots: 
+          - axes
+          - name
+slots:
+  axes:
+    description: > 
+      List of axes defining the coordinate system.
+      Must contain at least 2 and at most 3 space axes.
+    range: Axis
+    minimum_cardinality: 1
+    maximum_cardinality: 5
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+    required: true

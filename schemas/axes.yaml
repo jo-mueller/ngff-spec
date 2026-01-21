@@ -1,0 +1,44 @@
+id: https://ngff.openmicroscopy.org/0.6.dev3/axis
+name: ome-zarr-axis
+description: "OME-Zarr Axis schema."
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ome: https://ngff.openmicroscopy.org
+
+imports:
+  - linkml:types
+
+classes:
+  Axis:
+    description: "An axis in the OME-Zarr coordinate system."
+    slots:
+      - name
+      - longName
+      - type
+      - discrete
+      - unit
+
+slots:
+  name:
+    description: "Name of the axis. Must be unique within the coordinate system."
+    range: string
+    required: true
+    identifier: true  # Indicates this slot is used as an identifier
+  longName:
+    description: "Longer name or description of the axis."
+    range: string
+    required: false
+  type:
+    description: >
+      Type of the axis. Should be one of "space", "time" or "channel",
+      but may take other string values for custom axis types that are not part of the specification yet.
+    range: string
+    required: false
+  discrete:
+    description: "Whether the dimension is discrete or continuous."
+    range: boolean
+    required: false
+  unit:
+    description: "Unit for the axis."
+    range: string
+    required: false
