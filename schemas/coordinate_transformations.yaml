@@ -1,0 +1,113 @@
+id: https://ngff.openmicroscopy.org/0.6.dev3/coordinate_transformation
+name: ome-zarr-coordinate-transformation
+description: "OME-Zarr Coordinate System schema."
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ome: https://ngff.openmicroscopy.org
+
+slots:
+  transformation_matrix:
+    description: A minimal m×n matrix, represented as a nested list.
+    attributes:
+      elements:
+        range: Any  # Only a nested list, no other constraints
+        required: true
+        description: Nested list of matrix elements (e.g., [[1, 0], [0, 1]]).
+
+classes:
+  CoordinateTransformation:
+    description: "A coordinate transformation that maps coordinates from one space to another."
+    attributes:
+      - name: name
+        description: "The name of the coordinate transformation."
+        range: string
+        required: false
+      - name: type
+        description: "The type of coordinate transformation."
+        range: string
+        required: true
+  scale:
+    description: "Scale transformation."
+    is_a: CoordinateTransformation
+    slots:
+      - scale:
+          description: "Scaling factors for each axis."
+          range: float
+          multivalued: true
+          inlined: true
+          inlined_as_list: true
+          required: true
+    constraints:
+      - equals_string: "scale"
+        apply_to: type
+        description: "The type must be 'scale' for scale transformations."
+
+  translation:
+    description: "Translation transformation."
+    is_a: CoordinateTransformation
+    slots:
+      - translation:
+          description: "Translation offsets for each axis."
+          range: float
+          multivalued: true
+          inlined: true
+          inlined_as_list: true
+          required: true
+    constraints:
+      - equals_string: "translation"
+        apply_to: type
+        description: "The type must be 'translation' for translation transformations."
+
+  rotation:
+    description: "Rotation transformation."
+    is_a: CoordinateTransformation
+    constraints:
+      - any_of:
+          required: true
+          slots: [rotation, path]
+      - none_of:
+          slots: [rotation, path]
+      - equals_string: "rotation"
+        apply_to: type
+        description: "The type must be 'rotation' for rotation transformations."
+    slots:
+      - rotation
+      - path:
+          description: "Path to the rotation matrix file (e.g., JSON or CSV)."
+          range: string
+          required: false
+    slot_usage:
+        rotation:
+          is_a: transformation_matrix
+          description: "Rotation transformation matrix."
+
+  affine:
+    description: "Affine transformation."
+    is_a: CoordinateTransformation
+    constraints:
+      - any_of:
+          required: true
+          slots: [affine, path]
+      - none_of:
+          slots: [affine, path]
+      - equals_string: "affine"
+        apply_to: type
+        description: "The type must be 'affine' for affine transformations."
+    slots:
+      - affine
+    slot_usage:
+        affine:
+          is_a: transformation_matrix
+          description: "Affine transformation matrix."
+
+  sequence:
+    description: "Sequence of coordinate transformations."
+    is_a: CoordinateTransformation
+    slots:
+      - transformations:
+          description: "Ordered list of coordinate transformations to apply."
+          range: CoordinateTransformation
+          multivalued: true
+          inlined: true
+          inlined_as_list: true
+          required: true
