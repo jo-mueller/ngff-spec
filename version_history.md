@@ -15,7 +15,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - [RFC5](https://ngff.openmicroscopy.org/rfc/5/index.html) adopted: Transformations, coordinate systems and `scene` metadata.
 - Added `projectAxis` transform to add or drop dimensions at specified indices of the coordinate vector.
 - Added suggestion on which coordinate system to use for display in the spec document.
-- New `projectAxis` transformation to add or drop dimensions explicitly.
 
 ### Changed
 - BREAKING CHANGE: Unified `input` and `output` fields in all transformation metadata to be an object of `{"name": string, "path": string}` instead of allowing both string and object forms.
